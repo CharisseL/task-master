@@ -1,0 +1,10 @@
+extends ../shared/template
+
+block content
+  h2 New Priority
+
+  form(method='post', action='/priorities')
+    input(name='name', type='text', placeholder='Priority', autofocus=true)
+    input(name='color', type='color')
+    input(name='value', type='text', placeholder='1-10')
+    button Add Priority
