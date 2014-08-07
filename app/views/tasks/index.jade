@@ -1,0 +1,23 @@
+extends ../shared/template
+
+block content
+  h2 Tasks
+
+  table
+    thead
+      tr
+        th Name
+        th Due date
+        th Photo
+        th Task complete?
+        th Tags
+
+    tbody
+      each task in tasks 
+        tr
+          td= task.name
+          td= task.due
+          td: img(src='#{task.photo}')
+          td= task.complete
+          td= task.tags
+

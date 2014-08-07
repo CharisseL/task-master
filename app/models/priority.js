@@ -35,6 +35,18 @@ Priority.all = function(cb){
   });
 };
 
+/********************
+ *  FIND BY ID      *
+ ********************/
+
+Priority.findById = function(id, cb){
+  var _id = Mongo.ObjectID(id);
+
+  Priority.collection.findOne({_id:_id}, function(err, obj){
+    var priority = changePrototype(obj);
+    cb(priority);
+  });
+};
 module.exports = Priority;
 
 /********************

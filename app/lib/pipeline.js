@@ -4,7 +4,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var home = require('../controllers/home');
 var priorities = require('../controllers/priorities');
-
+var tasks = require('../controllers/tasks');
 module.exports = function(app, express){
 
   app.use(morgan('dev'));
@@ -19,9 +19,10 @@ module.exports = function(app, express){
   app.get('/priorities/new', priorities.init);
   app.post('/priorities', priorities.create);
   app.get('/priorities', priorities.index);
-  //app.get('/students/:id', students.show);
-  //app.get('/students/:id/test', students.newTest);
-  //app.post('/students/:id/test', students.addTest);
+
+  app.get('/tasks/new', tasks.init);
+  app.post('/tasks', tasks.create); 
+  app.get('/tasks', tasks.index);
   
   console.log('Pipeline Configured');
 };
