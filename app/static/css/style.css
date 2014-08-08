@@ -1,0 +1,56 @@
+html{
+  min-height: 100%;
+  background-color: #DAD9E5;
+}
+nav ul , #pages ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+} 
+
+nav li,#pages li {
+  display:inline-block;
+  margin: 2px 4px;
+}
+
+nav li a, #pages li a {
+  text-decoration: none;
+  color: #dad9e5;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table, th, td{
+  border: 1px solid black;
+  min-width: 100px;
+}
+
+.header{
+  background-color: #8F8FBD;
+  border-bottom: 1px solid black;
+}
+
+h1{
+  margin: 0;
+}
+
+body{
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+}
+
+.content{
+  background-color: #DAD9E5;
+  padding: 1em;
+  position: absolute;
+}
+
+h2 {
+  display: inline;
+  margin: 0 auto;
+  text-align: center;
+}
